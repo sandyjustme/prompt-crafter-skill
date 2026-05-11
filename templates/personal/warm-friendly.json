@@ -1,0 +1,22 @@
+{
+  "id": "personal-warm-friendly",
+  "basePrompt": "Warm personal branding poster in vertical 9:16 format, {{title}} in friendly approachable typography, {{style_keywords}}, inviting atmosphere, {{color_scheme}}, {{required_elements}}, natural photography style, authentic and relatable, personal touch",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "warm, friendly, approachable, authentic",
+    "color_scheme": "warm tones, natural colors",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A warm and inviting ",
+      "suffix": ", personal branding design, friendly atmosphere"
+    },
+    "flux": {
+      "style_modifiers": ", warm, friendly, natural photography, authentic feel"
+    },
+    "tongyi": {
+      "style_tag": "<photography>"
+    }
+  }
+}

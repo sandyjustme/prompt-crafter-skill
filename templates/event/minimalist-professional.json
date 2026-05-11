@@ -1,0 +1,19 @@
+{
+  "id": "event-minimalist-professional",
+  "basePrompt": "Professional event poster in vertical 9:16 format, {{title}} as main heading, {{style_keywords}}, clean minimalist design, {{color_scheme}}, {{required_elements}}, elegant typography, corporate style, clear information hierarchy",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "professional, clean, structured, organized",
+    "color_scheme": "neutral colors with one accent color",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A professional ",
+      "suffix": ", corporate event design, clean layout"
+    },
+    "flux": {
+      "style_modifiers": ", minimalist, professional, clean design, structured layout"
+    }
+  }
+}

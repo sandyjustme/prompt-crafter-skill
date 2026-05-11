@@ -1,0 +1,19 @@
+{
+  "id": "knowledge-clean-trustworthy",
+  "basePrompt": "Educational infographic poster in vertical 9:16 format, {{title}} as clear headline, {{style_keywords}}, organized information layout, {{color_scheme}}, {{required_elements}}, readable typography, professional educational design, clear visual hierarchy, data visualization elements",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "clear, informative, organized, professional",
+    "color_scheme": "calming colors for readability",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A professional educational ",
+      "suffix": ", infographic style, clear and informative"
+    },
+    "flux": {
+      "style_modifiers": ", educational, clear layout, infographic style, professional"
+    }
+  }
+}

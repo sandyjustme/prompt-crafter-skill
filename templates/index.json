@@ -1,0 +1,82 @@
+{
+  "templates": [
+    {
+      "id": "product-modern-professional",
+      "name": "Product-Modern-Professional",
+      "matchRules": {
+        "purpose": "Product promotion",
+        "style": "Modern minimalist",
+        "tone": "Professional & trustworthy"
+      },
+      "priority": 10,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "product/modern-professional.json"
+    },
+    {
+      "id": "product-colorful-lively",
+      "name": "Product-Colorful-Lively",
+      "matchRules": {
+        "purpose": "Product promotion",
+        "style": "Colorful & vibrant",
+        "tone": "Lively & fun"
+      },
+      "priority": 8,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "product/colorful-lively.json"
+    },
+    {
+      "id": "event-minimalist-professional",
+      "name": "Event-Minimalist-Professional",
+      "matchRules": {
+        "purpose": "Event/activity promotion",
+        "style": "Modern minimalist",
+        "tone": "Professional & trustworthy"
+      },
+      "priority": 9,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "event/minimalist-professional.json"
+    },
+    {
+      "id": "event-colorful-fun",
+      "name": "Event-Colorful-Fun",
+      "matchRules": {
+        "purpose": "Event/activity promotion",
+        "style": "Colorful & vibrant",
+        "tone": "Lively & fun"
+      },
+      "priority": 9,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "event/colorful-fun.json"
+    },
+    {
+      "id": "knowledge-clean-trustworthy",
+      "name": "Knowledge-Clean-Trustworthy",
+      "matchRules": {
+        "purpose": "Knowledge sharing/tutorial",
+        "style": "Modern minimalist",
+        "tone": "Professional & trustworthy"
+      },
+      "priority": 8,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "knowledge/clean-trustworthy.json"
+    },
+    {
+      "id": "personal-warm-friendly",
+      "name": "Personal-Warm-Friendly",
+      "matchRules": {
+        "purpose": "Personal branding/social media",
+        "style": "Photography/realistic",
+        "tone": "Warm & friendly"
+      },
+      "priority": 7,
+      "usageCount": 0,
+      "avgRating": 0,
+      "file": "personal/warm-friendly.json"
+    }
+  ]
+}

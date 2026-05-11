@@ -1,0 +1,22 @@
+{
+  "id": "product-modern-professional",
+  "basePrompt": "Professional product poster in vertical 9:16 format, {{title}} as main headline, {{style_keywords}}, clean minimalist layout, {{color_scheme}}, {{required_elements}}, modern typography, high-end commercial photography style, studio lighting, white or subtle gradient background",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "sleek, modern, professional, refined",
+    "color_scheme": "neutral tones with blue accent",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A high-quality ",
+      "suffix": ", professional commercial design, 4k"
+    },
+    "flux": {
+      "style_modifiers": ", photorealistic, 8k, sharp focus, professional product photography"
+    },
+    "tongyi": {
+      "style_tag": "<photography>"
+    }
+  }
+}

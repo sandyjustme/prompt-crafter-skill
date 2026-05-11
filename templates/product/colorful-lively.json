@@ -1,0 +1,22 @@
+{
+  "id": "product-colorful-lively",
+  "basePrompt": "Vibrant product poster in vertical 9:16 format, {{title}} in bold dynamic typography, {{style_keywords}}, energetic colorful design, {{color_scheme}}, {{required_elements}}, playful composition, eye-catching visual elements, modern graphic design style",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "dynamic, energetic, bold, vibrant",
+    "color_scheme": "bright colors with high contrast",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A vibrant ",
+      "suffix": ", energetic commercial design, bold colors"
+    },
+    "flux": {
+      "style_modifiers": ", colorful, high saturation, dynamic composition, modern graphic design"
+    },
+    "tongyi": {
+      "style_tag": "<flat illustration>"
+    }
+  }
+}

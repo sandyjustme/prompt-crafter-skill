@@ -1,0 +1,17 @@
+{
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "enabled": true
+  },
+  "defaults": {
+    "targetModel": "dalle-3",
+    "tone": "Professional & trustworthy",
+    "style": "Modern minimalist",
+    "language": "zh-CN"
+  },
+  "templates": {
+    "autoUpdate": true,
+    "minRatingToSave": 4.0
+  }
+}

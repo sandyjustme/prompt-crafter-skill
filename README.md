@@ -1,320 +1,101 @@
-# Prompt Optimizer - AI图片生成提示词优化工具
+# Prompt Optimizer Skill
 
-## 📖 简介
+A Claude Code skill for generating optimized image generation prompts.
 
-Prompt Optimizer 是一个专为Claude Code设计的智能skill，帮助用户轻松创建高质量的AI图片生成提示词。无论你是设计师、营销人员还是普通用户，都能通过这个工具快速生成专业的图片提示词。
+## What It Does
 
-## ✨ 功能特点
+Helps users create high-quality prompts for AI image generation tools (DALL-E, Midjourney, Flux, 通义万相, 即梦, etc.) through three easy modes:
 
-### 🌐 多语言支持
-- 支持中英文输入
-- 自动生成英文提示词（AI图片生成模型通用）
-- 提供中文说明帮助理解
+1. **Guided Q&A** - Answer 7 simple questions
+2. **Free Description** - Describe what you want in natural language
+3. **Reference Image** - Upload a style reference
 
-### 🎯 三种使用模式
+## Features
 
-1. **引导式问答（推荐）**
-   - 通过7个简单问题构建精准提示词
-   - 适合想要精确控制效果的用户
+- **Hybrid Intelligence**: Uses templates for common scenarios (fast, free) + LLM for complex requests (high quality)
+- **Tolerance for Incomplete Input**: Always generates an "intent prompt" even with missing info
+- **Multi-Model Support**: Optimizes prompts for different AI models
+- **Template Library**: 6+ pre-built templates that improve over time
 
-2. **自由描述**
-   - 用自然语言描述你的想法
-   - AI智能理解并转换为专业提示词
-   - 适合快速尝试或不确定需求的用户
-
-3. **参考图片**
-   - 上传风格参考图
-   - 自动分析并生成类似风格的提示词
-   - 适合有具体视觉示例的场景
-
-### 🤖 多模型支持
-
-支持所有主流AI图片生成模型：
-- **国际模型**：DALL-E 3, ChatGPT Images 2.0, Midjourney, Flux, Stable Diffusion
-- **国内模型**：通义万相, 即梦
-
-### 💡 智能容错
-
-- 即使信息不完整也能生成可用提示词
-- 智能默认值填充
-- 提供改进建议
-- 混合模式：保守默认 + 创意建议
-
-## 📥 安装方法
-
-### 方式1：自动安装（推荐）
+## Installation
 
 ```bash
-# 将skill文件放到Claude skills目录并解压
-cd ~/.claude/skills
-tar -xzf /path/to/prompt-optimizer.skill
-
-# 重启Claude Code或在Claude中输入：
-# /skills reload
+# The skill is already installed at:
+~/.claude/skills/prompt-optimizer/
 ```
 
-### 方式2：手动安装
+## Usage
 
+Just ask Claude:
+- "Help me create a poster"
+- "I need a prompt for generating an image"
+- "I want to make a product promotional image but don't know how to describe it"
+
+## Requirements
+
+**Optional**: OpenAI API key for LLM enhancement (skill works without it using templates)
+
+To configure:
 ```bash
-# 创建目录
-mkdir -p ~/.claude/skills/prompt-optimizer
-
-# 解压文件到该目录
-tar -xzf prompt-optimizer.skill -C ~/.claude/skills/prompt-optimizer
-
-# 重启Claude Code
+# Edit config.json and add your API key
+vi ~/.claude/skills/prompt-optimizer/config.json
 ```
 
-### 验证安装
-
-安装完成后，在Claude Code中输入：
-```
-帮我生成一个海报提示词
-```
-
-如果skill正确安装，会自动触发并开始引导流程。
-
-## 🚀 使用方法
-
-### 快速开始
-
-只需要对Claude说以下任意一句话：
-
-```
-帮我生成一个海报提示词
-I need a prompt for generating an image
-我想做个宣传图但不知道怎么描述
-帮我优化这个图片提示词
-```
-
-Skill会自动触发并引导你完成。
-
-### 使用示例
-
-#### 示例1：产品宣传海报
-
-**输入（自由描述模式）：**
-```
-我需要做一个咖啡新品的宣传海报，发朋友圈用，
-产品叫"晨光拿铁"，有20%优惠，
-希望看起来专业但温暖，需要放logo和二维码
-```
-
-**输出：**
-- ✅ 完整的英文提示词（可直接用于DALL-E等工具）
-- 📝 中文说明（帮助理解生成效果）
-- 🎨 推荐的AI模型
-- ⚙️ 调整选项（如需修改）
-
-#### 示例2：活动宣传（中文输入）
-
-**输入：**
-```
-下周五公司技术分享会，AI应用主题，
-发内部群，要专业但不要太严肃
-```
-
-**输出：**
-自动处理中文输入，生成适合内部活动的专业提示词
-
-#### 示例3：极简输入
-
-**输入：**
-```
-make me a poster
-```
-
-**输出：**
-- 生成基础提示词
-- 提供三个选项：
-  - A) 添加创意细节
-  - B) 回答2-3个快速问题
-  - C) 使用当前简单版本
-
-## 🎨 功能详解
-
-### 模式A：引导式问答
-
-回答7个简单问题：
-
-1. **用途**：产品宣传 / 活动推广 / 知识分享 / 个人品牌
-2. **尺寸**：竖屏(9:16) / 方形(1:1) / 横屏(16:9) / 自定义
-3. **标题**：主标题和副标题
-4. **关键信息**：日期、地点、价格等
-5. **调性**：专业 / 活泼 / 温暖 / 酷炫 / 优雅
-6. **设计风格**：现代简约 / 色彩丰富 / 复古 / 插画 / 摄影
-7. **必需元素**：Logo、二维码、其他
-
-### 模式B：自由描述
-
-只需用自然语言描述：
-- 这个海报是用来做什么的？
-- 在什么场景使用？
-- 希望达到什么效果？
-- 有什么特殊要求？
-
-AI会自动理解并提取关键信息。
-
-### 模式C：参考图片
-
-上传一张风格参考图，AI会：
-1. 分析图片的视觉风格
-2. 提取色彩方案和设计元素
-3. 生成类似风格的提示词
-
-## 💎 进阶功能
-
-### 快速调整
-
-生成提示词后，可以快速调整：
-- 调亮/调暗
-- 更简约/更丰富
-- 换个配色
-- 强调特定元素
-- 添加特效（光晕、复古滤镜等）
-
-### 模板系统
-
-内置6个常用模板：
-- 产品宣传（现代/活泼风格）
-- 活动推广（专业/有趣风格）
-- 知识分享（清晰/可信风格）
-- 个人品牌（温暖/友好风格）
-
-模板会根据使用反馈自动优化。
-
-### 多模型优化
-
-针对不同AI模型自动优化提示词格式：
-- DALL-E 3: 添加质量标记
-- Flux: 添加技术参数
-- 通义万相: 添加风格标签
-- 即梦: 优化中文描述
-
-## ❓ 常见问题
-
-### Q1: 安装后如何验证是否成功？
-
-A: 在Claude中说"帮我生成一个海报提示词"，如果出现引导界面，说明安装成功。
-
-### Q2: 生成的提示词太长/太短怎么办？
-
-A: 在生成后选择"调整"选项，可以要求"更简洁"或"更详细"。
-
-### Q3: 支持哪些语言输入？
-
-A: 主要支持中文和英文。输出统一为英文（适合所有AI图片生成模型）+ 中文说明。
-
-### Q4: 生成的提示词在哪里使用？
-
-A: 可以在任何AI图片生成工具中使用：
-- ChatGPT (DALL-E 3)
-- Midjourney
-- Stable Diffusion
-- Flux
-- 通义万相
-- 即梦
-- 等其他工具
-
-### Q5: 需要配置API key吗？
-
-A: 基础功能不需要。如果想使用LLM增强功能（处理特别复杂的需求），可以在配置文件中添加OpenAI API key，但这是可选的。
-
-### Q6: 如何修改默认设置？
-
-A: 编辑 `~/.claude/skills/prompt-optimizer/config.json` 文件，可以修改：
-- 默认模型
-- 默认风格
-- 默认调性
-
-## 🛠️ 技术信息
-
-### 文件结构
+## File Structure
 
 ```
 prompt-optimizer/
-├── SKILL.md              # 主skill文件
-├── README.md             # 说明文档
-├── config.json           # 配置文件
-├── templates/            # 模板库
+├── SKILL.md              # Main skill instructions
+├── config.json           # Configuration
+├── templates/            # Template library
 │   ├── index.json
-│   ├── product/          # 产品类模板
-│   ├── event/            # 活动类模板
-│   ├── knowledge/        # 知识类模板
-│   └── personal/         # 个人品牌模板
-└── prompts/              # LLM提示词模板
+│   ├── product/          # Product promotion templates
+│   ├── event/            # Event promotion templates
+│   ├── knowledge/        # Knowledge sharing templates
+│   └── personal/         # Personal branding templates
+└── prompts/              # LLM meta-prompts
     ├── llm-generator.md
     ├── llm-reviewer.md
     └── freeform-parser.md
 ```
 
-### 配置文件
+## How It Works
 
-位置：`~/.claude/skills/prompt-optimizer/config.json`
+1. User chooses entry mode (Q&A / Free Description / Reference Image)
+2. Skill collects requirements
+3. Matches appropriate template OR uses LLM to generate
+4. Outputs optimized prompt with Chinese explanation
+5. Offers quick adjustment options
+
+## Customization
+
+### Add New Templates
+
+Create a JSON file in `templates/{category}/your-template.json`:
 
 ```json
 {
-  "llm": {
-    "provider": "openai",
-    "model": "gpt-4o-mini",
-    "enabled": true
-  },
-  "defaults": {
-    "targetModel": "dalle-3",
-    "tone": "Professional & trustworthy",
-    "style": "Modern minimalist"
+  "id": "your-template-id",
+  "basePrompt": "Your prompt template with {{variables}}",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "your, keywords"
   }
 }
 ```
 
-### 系统要求
+Then add it to `templates/index.json`.
 
-- Claude Code（最新版本）
-- 无需额外依赖
-- 可选：OpenAI API key（用于LLM增强功能）
+### Configure Defaults
 
-## 📊 性能说明
+Edit `config.json` to change default model, tone, style.
 
-- 平均响应时间：30-40秒
-- 模板匹配：即时
-- LLM增强：额外5-10秒
-- 支持场景：所有图片生成需求
+## Tips
 
-## 🤝 反馈与支持
+- The skill is designed for普通用户 (general users), not professional designers
+- Always start with Mode B (Free Description) if you're not sure what you want
+- Templates improve automatically based on usage
 
-### 使用建议
+## Support
 
-1. 第一次使用时，建议用**引导式问答**熟悉流程
-2. 熟悉后可以用**自由描述**快速生成
-3. 有具体参考图时，用**参考图片模式**最高效
-
-### 已知限制
-
-- 提示词质量依赖输入信息的完整性
-- 极简输入会得到基础提示词（可通过追问改善）
-- 参考图片分析需要Claude的图片识别能力
-
-### 路线图
-
-未来可能添加的功能：
-- 批量生成（多个变体）
-- 风格库（保存和复用喜欢的风格）
-- 团队模板（共享团队常用模板）
-- 历史记录（查看之前生成的提示词）
-
-## 📄 许可与版权
-
-本skill由Claude Code用户创建，基于prompt-optimizer设计。
-可自由使用、修改和分享。
-
----
-
-## 🎉 快速上手
-
-安装完成后，试试这句话：
-
-```
-帮我生成一个海报提示词，我想做一个XX的宣传图
-```
-
-祝你使用愉快！如有问题，欢迎反馈。
+Created with Claude Code skill-creator.

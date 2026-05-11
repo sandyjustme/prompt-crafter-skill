@@ -1,0 +1,23 @@
+{
+  "skill_name": "prompt-optimizer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to make a poster for our company's new coffee product launch. It'll be posted on WeChat Moments. The product is called 'Morning Bliss Latte' and we're having a 20% off promotion. I want it to look professional but also warm and inviting, not too corporate. Need to include our logo and a QR code for ordering.",
+      "expected_output": "A complete English prompt optimized for image generation that captures: professional yet warm tone, product name clearly featured, promotional aspect, coffee/beverage context, suitable for social media (vertical format), includes space for logo and QR code. The prompt should be specific enough to generate a cohesive design.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "帮我生成一个海报提示词，但我不太确定具体要什么。就是想做个活动宣传，我们公司下周五有个技术分享会，主题是AI应用，想发到内部群里，希望看起来专业一点但不要太严肃，毕竟是内部活动。",
+      "expected_output": "A well-structured English prompt that interprets the Chinese description: event promotion for tech sharing session, AI applications theme, for internal WeChat group distribution, professional but not overly formal tone. Should handle the somewhat vague requirements gracefully and produce a usable prompt.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "make me a poster",
+      "expected_output": "Despite minimal input, the skill should generate an intent prompt with smart defaults, clearly mark what's uncertain (likely everything except format), and provide guidance on how to improve it. Should NOT refuse or ask for more info before generating something.",
+      "files": []
+    }
+  ]
+}

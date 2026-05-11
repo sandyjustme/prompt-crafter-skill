@@ -1,0 +1,19 @@
+{
+  "id": "event-colorful-fun",
+  "basePrompt": "Lively event poster in vertical 9:16 format, {{title}} in playful bold typography, {{style_keywords}}, energetic colorful design, {{color_scheme}}, {{required_elements}}, fun decorative elements, dynamic composition, inviting and exciting atmosphere",
+  "variables": {
+    "title": "from_user",
+    "style_keywords": "fun, energetic, playful, dynamic",
+    "color_scheme": "vibrant colors, cheerful palette",
+    "required_elements": "from_user"
+  },
+  "modelAdaptations": {
+    "dalle-3": {
+      "prefix": "A vibrant ",
+      "suffix": ", fun event design, colorful and energetic"
+    },
+    "flux": {
+      "style_modifiers": ", colorful, fun, energetic, playful design elements"
+    }
+  }
+}
