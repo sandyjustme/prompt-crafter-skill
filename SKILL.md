@@ -1,5 +1,5 @@
 ---
-name: prompt-optimizer
+name: prompt-crafter-skill
 description: Helps users create high-quality image generation prompts for AI tools like DALL-E, Midjourney, Flux, and Chinese models (通义万相, 即梦). Use this skill when users want to generate images, create posters, design graphics, or need help writing prompts for image generation. Also trigger when users mention they're stuck or don't know how to describe what they want - this skill has a friendly "free description" mode that helps them articulate their vision.
 allowed-tools:
   - Read
